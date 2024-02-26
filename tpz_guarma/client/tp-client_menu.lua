@@ -1,7 +1,7 @@
 ---@diagnostic disable: undefined-global
 MenuData = {}
 
-TriggerEvent("menuapi:getData", function(call)
+TriggerEvent("tpz_menu_base:getData", function(call)
     MenuData = call
 end)
 
