@@ -40,6 +40,7 @@ function OpenTravellingMenu(index)
     function(data, menu)
         if (data.current == "backup") then
             TaskStandStill(PlayerPedId(), 1)
+            menu.close()
             OpenedMenu = false
             return
         end
