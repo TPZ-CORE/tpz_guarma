@@ -84,9 +84,10 @@ function OpenTravellingMenu(index)
             menu.close()
 
             TaskStandStill(PlayerPedId(), 1)
-            DoScreenFadeIn(1000)
-            
+            DoScreenFadeIn(2000)
             ExecuteCommand("hud:hideall")
+
+            Wait(2000)
             if not config.IsGuarma then
     
                 Citizen.InvokeNative(0x1E5B70E53DB661E5, 0, 0, 0, config.LoadingScreenLabels['1'], config.LoadingScreenLabels['2'], config.LoadingScreenLabels['3'])
