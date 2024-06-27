@@ -24,6 +24,8 @@ Config.Travelling = {
         SpawnLocation           = {x = 1269.242, y = -6854.48, z = 43.318, h = 244.54634094238}, -- The spawn location when travelling from Saint Denis to Guarma.
 
         AllowTravelPayments     = true,
+        MenuLabel               = "Travel to Guarma Free", -- This option (MenuLabel) is required when AllowTravelPayments is set to false.
+
         PromptFooterDescription = "Saint Denis Travelling Port Side",
 
         LoadingScreenLabels     = {
