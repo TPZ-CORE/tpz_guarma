@@ -88,17 +88,18 @@ Citizen.CreateThread(function()
                 if (distance <= locationConfig.ActionDistance) then
                     sleep = false
 
+                    local promptGroup, promptList = GetPromptData()
+
                     local label = CreateVarString(10, 'LITERAL_STRING', locationConfig.PromptFooterDescription)
-                    PromptSetActiveGroupThisFrame(Prompts, label)
+                    PromptSetActiveGroupThisFrame(promptGroup, label)
                     
-                    for i, prompt in pairs (PromptsList) do
+                    for i, prompt in pairs (promptList) do
     
                         if PromptHasHoldModeCompleted(prompt.prompt) then
 
                             if prompt.action == "OPEN_MENU" then
 
                                 OpenTravellingMenu(locId)
-                                -- open menu first
                             end
 
                             Wait(1000)
@@ -118,3 +119,4 @@ Citizen.CreateThread(function()
     end
 
 end)
+
