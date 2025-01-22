@@ -3,9 +3,8 @@
  Prompts
 ]]---------------------------------------------------------
 
-Prompts       = GetRandomIntInRange(0, 0xffffff)
-PromptsList   = {}
-
+local Prompts     = GetRandomIntInRange(0, 0xffffff)
+local PromptsList = {}
 
 CreateLocationPrompts = function()
 
@@ -31,6 +30,25 @@ CreateLocationPrompts = function()
     end
 
 end
+
+GetPromptData = function ()
+    return Prompts, PromptsList
+end
+
+--[[-------------------------------------------------------
+ Events
+]]---------------------------------------------------------
+
+AddEventHandler('onResourceStop', function(resourceName)
+    if (GetCurrentResourceName() ~= resourceName) then
+        return
+    end
+
+    Citizen.InvokeNative(0x00EDE88D4D13CF59, Prompts) -- UiPromptDelete
+
+    Prompts     = nil
+    PromptsList = nil
+end)
 
 --[[-------------------------------------------------------
  Blips Management
