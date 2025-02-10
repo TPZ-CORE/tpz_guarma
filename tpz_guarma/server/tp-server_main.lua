@@ -1,9 +1,7 @@
-local TPZ         = {}
-local TPZInv      = exports.tpz_inventory:getInventoryAPI()
+local TPZ    = exports.tpz_core:getCoreAPI()
+local TPZInv = exports.tpz_inventory:getInventoryAPI()
 
-TriggerEvent("getTPZCore", function(cb) TPZ = cb end)
-
-exports.tpz_core:rServerAPI().addNewCallBack("tpz_guarma:hasSelectedPaymentMethod", function(source, cb, data)
+exports.tpz_core:getCoreAPI().addNewCallBack("tpz_guarma:hasSelectedPaymentMethod", function(source, cb, data)
     local _source = source
     local xPlayer = TPZ.GetPlayer(_source)
 
