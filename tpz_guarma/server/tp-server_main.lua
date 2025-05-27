@@ -1,6 +1,10 @@
 local TPZ    = exports.tpz_core:getCoreAPI()
 local TPZInv = exports.tpz_inventory:getInventoryAPI()
 
+-----------------------------------------------------------
+--[[ Callbacks  ]]--
+-----------------------------------------------------------
+
 exports.tpz_core:getCoreAPI().addNewCallBack("tpz_guarma:hasSelectedPaymentMethod", function(source, cb, data)
     local _source = source
     local xPlayer = TPZ.GetPlayer(_source)
