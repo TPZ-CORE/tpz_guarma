@@ -1,15 +1,19 @@
 ---@diagnostic disable: undefined-global
-MenuData = {}
+local MenuData = {}
 
 TriggerEvent("tpz_menu_base:getData", function(call)
     MenuData = call
 end)
 
-OpenedMenu = false
+local OpenedMenu = false
 
 -----------------------------------------------------------
 --[[ Functions  ]]--
 -----------------------------------------------------------
+
+function HasOpenedMenu()
+    return OpenedMenu
+end
 
 function OpenTravellingMenu(index)
     OpenedMenu = true
