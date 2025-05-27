@@ -76,7 +76,7 @@ Citizen.CreateThread(function()
         local player       = PlayerPedId()
         local isPlayerDead = IsEntityDead(player)
 
-        if LoadedPlayer and not isPlayerDead and not OpenedMenu then 
+        if LoadedPlayer and not isPlayerDead and not HasOpenedMenu() then 
             local coords = GetEntityCoords(player)
 
             for locId, locationConfig in pairs(Config.Travelling) do
