@@ -7,6 +7,9 @@ end)
 
 OpenedMenu = false
 
+-----------------------------------------------------------
+--[[ Functions  ]]--
+-----------------------------------------------------------
 
 function OpenTravellingMenu(index)
     OpenedMenu = true
