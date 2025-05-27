@@ -107,7 +107,7 @@ function OpenTravellingMenu(index)
     
             Wait(3000)
 
-            exports.tpz_core:getCoreAPI().teleportToCoords(config.SpawnLocation.x, config.SpawnLocation.y, config.SpawnLocation.z, config.SpawnLocation.h)
+            exports.tpz_core:getCoreAPI().TeleportToCoords(config.SpawnLocation.x, config.SpawnLocation.y, config.SpawnLocation.z, config.SpawnLocation.h)
     
             Wait(20000)
     
